@@ -3,7 +3,7 @@
 from os import path
 import requests,random,uuid,string,hashlib,json
 from os import path
-import os,uuid,base64,requests,zlib,httpx,time,platform,datetime
+import os,uuid,base64,requests,zlib,time,platform,datetime
 from time import localtime as lt
 from urllib.request import urlopen
 import os,base64,zlib,pip,urllib,urllib3
